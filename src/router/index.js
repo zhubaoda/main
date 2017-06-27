@@ -4,7 +4,7 @@ Vue.use(Router)
 
 
 let routes = [{
-    path: '/home',
+    path: '/',
     component: resolve => require(['../views/home.vue'], resolve),
     children: [{
         path: '/home/index',
@@ -27,7 +27,7 @@ let routes = [{
 
 
 var router = new Router({
-    mode: 'history', //把#去掉
+    //mode: 'history', //把#去掉
     //hashbang: true,
     // history: true,
     saveScrollPosition: true,
