@@ -64,6 +64,10 @@ input {
     .name {
         text-align: left;
     }
+    .search_box{
+        text-align: left;
+        color:#FA6705;
+    }
     .swiper {
         height: 205px;
         img {
@@ -104,6 +108,7 @@ input {
             <span class="sign_out" @click="signOut" v-if="usrname">退出登录</span>
             <span class="sign_out" v-if="!usrname" @click="goLogin">去登录</span>
         </div>
+        <div class="search_box" @click="searchIt()">关于搜索页面</div>
     </div>
 </template>
 <script>
@@ -180,6 +185,9 @@ export default {
             },
             cancel(){
                 this.value = '';
+            },
+            searchIt(){
+                this.$router.push('/search')
             }
         },
         created() {

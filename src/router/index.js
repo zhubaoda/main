@@ -23,6 +23,9 @@ let routes = [{
 }, {
     path: '/login',
     component: resolve => require(['../views/login.vue'], resolve),
+},{
+    path: '/search',
+    component: resolve => require(['../views/search.vue'], resolve),
 }]
 
 
